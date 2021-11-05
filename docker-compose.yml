@@ -1,7 +1,7 @@
 version: '3'
 services:
   iotwifi:    
-    image: cjimti/iotwifi
+    build: iotwifi
     restart: always
     # depends_on:
     privileged: true
