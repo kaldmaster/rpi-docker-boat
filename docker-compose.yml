@@ -6,7 +6,7 @@ services:
     # depends_on:
     privileged: true
     network_mode: "host"
-    environment:
+    # environment:
       # - LOOP=true
       # - LOOP_DELAY=3600 # Once per hour
       # - DB_SAVE=true
