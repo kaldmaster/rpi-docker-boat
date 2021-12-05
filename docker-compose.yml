@@ -17,7 +17,7 @@ services:
     restart: unless-stopped
     network_mode: bridge
     ports:
-      - "8086:8086"
+      - "8086"
     volumes:
       - $PWD/../signalk_volume/influxdb:/var/lib/influxdb
     logging:
@@ -31,7 +31,7 @@ services:
     network_mode: bridge
     user: "0:0"
     ports:
-      - "3001:3000"
+      - "3000"
     links:
       - influxdb
     volumes:
