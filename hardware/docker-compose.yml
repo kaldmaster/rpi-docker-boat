@@ -1,0 +1,10 @@
+version: '3'
+services:
+  iotwifi:    
+    build: iotwifi
+    restart: always
+    privileged: true
+    network_mode: "host"
+    logging:
+      options:
+        max-size: 10m
