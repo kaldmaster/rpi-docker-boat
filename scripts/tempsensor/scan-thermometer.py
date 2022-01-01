@@ -21,12 +21,12 @@ class ScanDelegate(DefaultDelegate):
         return True
 
     def isCorrectDevice(self, addr):
-        print(str(sys.argv))
-        print(str(addr))
+        print(str(sys.argv[1].lower))
+        print(str(addr.lower()))
         if (len(sys.argv) == 1):
             return True
         else:
-            return sys.argv[1] == addr
+            return sys.argv[1].lower() == addr.lower()
     
     def parseData(self, val):
         bytes = [int(val[i:i+2], 16) for i in range(0, len(val), 2)]
