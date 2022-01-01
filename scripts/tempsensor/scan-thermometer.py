@@ -21,6 +21,7 @@ class ScanDelegate(DefaultDelegate):
         return True
 
     def isCorrectDevice(self, addr):
+        print(str(addr))
         if (len(sys.argv) == 1):
             return True
         else:
