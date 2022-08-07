@@ -37,9 +37,17 @@ Run run_me_1st.sh when installing SignalK, Telegraf, Influxdb and Grafana at fir
 
 
 ## Hardware configuration
+### Network configuration
 The wifi, LTE and CAN connections are configured using Systemd-Networkd to 
 enable a local wifi hotspot with internet sharing from the LTE connection. 
 The can interface is enabling communication with the NMEA2000 network.
 
-The configuration files are in the network/systemd-networkd folder and the
-guide to set it up correctly is on [link]()
+The configuration files are in the network/systemd-networkd folder. 
+
+The guide followed was [Use systemd-networkd for general networking](https://raspberrypi.stackexchange.com/a/108593/79866)
+for switching to systemd-networkd for networking and [Setting up a Raspberry Pi as an access point - the easy way](https://raspberrypi.stackexchange.com/questions/88214/setting-up-a-raspberry-pi-as-an-access-point-the-easy-way) for enabling the
+access point and internet sharing. 
+
+Unfortunatley wpa_supplicant could not be used as AP software because of WPA2 
+authentication issues with different clients. Hostapd should be used
+instead.
