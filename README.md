@@ -37,10 +37,9 @@ Run run_me_1st.sh when installing SignalK, Telegraf, Influxdb and Grafana at fir
 
 
 ## Hardware configuration
-The wifi configuration part is build upon [cjimti/iotwifi](https://github.com/cjimti/iotwifi). It provides a AP wifi that can be used for configuring the wifi of the RPi. 
+The wifi, LTE and CAN connections are configured using Systemd-Networkd to 
+enable a local wifi hotspot with internet sharing from the LTE connection. 
+The can interface is enabling communication with the NMEA2000 network.
 
-To connect the RPi to a network use the following HTTP POST command.
-```
-curl -w "\n" -d '{"ssid":"batman-slow", "psk":"*"}' -H "Content-Type: application/json" \ -X POST localhost:8080/connect
-```
-The network to connect to must have the same channel as the RPi AP network.
+The configuration files are in the network/systemd-networkd folder and the
+guide to set it up correctly is on [link]()
