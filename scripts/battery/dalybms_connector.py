@@ -14,7 +14,7 @@ from dalybms import *
 
 bms_mac = "96:69:08:01:05:08"
 
-logging.basicConfig(filename='dalybms_connector_log.log', encoding='utf-8', level=logging.DEBUG)
+logging.basicConfig(filename='dalybms_connector_log.log', level=logging.DEBUG)
 
 async def read_bms():
     bms = DalyBMSBluetooth()
