@@ -10,7 +10,7 @@
 
 import asyncio
 import logging
-from dalybms import *
+from dalybms import DalyBMSBluetooth
 
 bms_mac = "96:69:08:01:05:08"
 
@@ -25,6 +25,7 @@ async def read_bms():
     all_data = await bms.get_all()
     #mosfet_data = await bms.set_discharge_mosfet(True)
     print(all_data)
+    await bms.disconnect()
     #print(mosfet_data)
     return all_data
 
